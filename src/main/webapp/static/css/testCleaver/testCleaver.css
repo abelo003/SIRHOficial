@@ -1,0 +1,168 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01-mar-2015, 7:55:43
+    Author     : macpro
+*/
+
+section[id="centro"] #preguntas{
+    height: 100%;
+    position: relative;
+}
+/*Encabezado de las preguntas*/
+div#preguntas section:nth-child(1){
+    height: 80px;
+    margin: 0;
+    position: relative;
+}
+/*Texto dek encabezado*/
+div#preguntas section:nth-child(1) div#nombreTest{
+    text-align: left;
+    font-size: 30px;
+}
+
+div#preguntas section:nth-child(1) div#indicadorPregunta{
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0px;
+}
+
+/*Área dinámica de las preguntas*/
+div#preguntas section:nth-child(2){
+    position: relative;
+    /*background: orange;*/
+}
+
+div#contenedorRespuestas{
+    min-height: 250px;
+}
+
+#contenedorResp{
+    position: absolute;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 130px;
+    height: 100%;
+}
+
+#divResPlus, #divResLess{
+    position: relative;
+    border: 1px rgba(0,0,0,0.1) solid;
+    height: 100px;
+    width: 230px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    -moz-transition: -moz-transform 0.2s ease-out;
+    -o-transition: -o-transform 0.2s ease-out;
+    -ms-transition: -ms-transform 0.2s ease-out;
+}
+
+#divResPlus:before, #divResLess:before{
+    content: "+";
+    position: absolute;
+    color: rgba(0,0,0,0.3);
+    font-size: 60px;
+    text-align: center;
+    /*height: 40px;*/
+    /*line-height: 100%;*/
+    height: 100%;
+    
+    width: 40px;
+    top: 0px;
+    right: 0px;
+    /*top: 50%;*/
+    /*margin-top: -20px;*/
+    border: 3px rgba(0,0,0,0.2) dashed;
+    box-sizing: border-box;
+    /*background-image: url(../../images/cursor.png);*/
+/*    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;*/
+    z-index: 10;
+    
+/*    -webkit-animation-name: pulse 1s linear;
+    -moz-animation-name: pulse;
+    -ms-animation-name: pulse;
+    -o-animation-name: pulse;
+    animation-name: pulse;*/
+}
+
+#divResLess:before{
+    content: "-";
+}
+/*#divResPlus:hover:before, #divResLess:hover:before{
+    -webkit-animation: pulse 1s infinite;
+    -moz-animation: pulse 1s infinite;
+    -ms-animation: pulse 1s infinite;
+    -o-animation: pulse 1s infinite;
+    animation: pulse 1s infinite;
+}*/
+
+#divResPlus:after, #divResLess:after{
+    content: "+";
+    position: absolute;
+    font-size: 100px;
+    line-height: 100%;
+    text-align: center;
+    color: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+}
+
+#divResLess:after{
+    content: "-";
+}
+
+#articleRespuestas{
+    position: absolute;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 300px;
+    height: 100%;
+}
+
+.respuesta{
+    position: relative;
+    z-index: 10;
+    font-size: 30px;
+    box-sizing: border-box;
+    border: dashed red 2px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 30px;
+    cursor: move;
+    background-color: #bce8f1;
+    background-image: url(../../images/B_Mover.png);
+    background-size: 20px 20px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    padding-right: 5px;
+    margin-bottom: 5px;
+
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    -moz-transition: -moz-transform 0.2s ease-out;
+    -o-transition: -o-transform 0.2s ease-out;
+    -ms-transition: -ms-transform 0.2s ease-out;
+}
+.moving{
+    -ms-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+}
+#contenedorResp .hovermoreless{
+    box-sizing: border-box;
+    border: 3px dashed #000;
+}

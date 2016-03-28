@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29-ene-2015, 22:41:57
+    Author     : macpro
+*/
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+body{
+    top: 0px;
+    position: absolute
+}
+/*Inicia seccion del banner*/
+header{
+    position: absolute;
+    top: 0px;
+    height: 70px;
+    width: 100%;
+}
+
+header hgroup{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+/*    background: none repeat scroll 0% 0% #FFF;*/
+}
+
+header hgroup div#bannerCen{
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    z-index: 10;
+    background-image: url(../images/BannerFondo.png);
+    background-repeat: repeat-x;
+}
+
+header hgroup div#bannerIzq{
+    position: absolute;
+    height: 70px;
+    width: 172px;
+    z-index: 12;
+    background-image: url(../images/BannerIzq.png);
+    background-repeat: no-repeat;
+}
+
+header hgroup div#bannerDer{
+    position: absolute;
+    height: 70px;
+    width: 249px;
+    z-index: 11;
+    right: 0px;
+    background-image: url(../images/BannerDer.png);
+    background-repeat: no-repeat;
+}
+
+/*Termina estilo del banner*/
+
+section[id="contenido"]{
+    position: absolute;
+    top: 71px;
+    height: calc(100% - 111px);
+    width: 100%;
+    background: none repeat scroll 0% 0% #F1F1F1;
+}
+
+section[id="centro"]{
+    height: 100%;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+    border-radius: 3px;
+    overflow: auto;
+    min-height: 40px;
+    background: none repeat scroll 0% 0% #FFF;
+}
+
+footer{
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    bottom: 0px;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-left: 20px;
+    
+    box-sizing: border-box;
+    background: none repeat scroll 0% 0% #FFF;
+    border-top: 1px solid #E5E5E5;
+}
